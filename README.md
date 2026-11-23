@@ -304,3 +304,48 @@ See `docs/AI_USAGE.md` for methodology and evidence.
 The API, Docker environment, Keycloak authentication, role-based permissions, inventory workflows, concurrency control, and soft delete behavior were verified in the development environment.
 
 A fully clean-machine installation should be independently validated before treating this configuration as a production-ready deployment.
+
+## Clean Clone Verification
+
+The repository was cloned into a separate local directory to validate the containerized setup independently of the original development workspace.
+
+The following command was executed:
+
+```bash
+docker compose up -d --build
+```
+
+The verification confirmed:
+
+- Successful .NET 10 API image build.
+- Creation of a new Docker network and persistent volumes.
+- Successful SQL Server startup and health checks.
+- Automatic creation of `InventoryDB` and its schema.
+- Successful import of `InventoryRealm` into Keycloak.
+- Successful startup of the ASP.NET Core API on port 5089.
+
+All required services started without blocking errors.
+
+The environment uses development settings and is not intended for production deployment.
+
+## Clean Clone Verification
+
+The repository was cloned into a separate local directory to verify the deployment independently of the original development environment.
+
+The following command was executed:
+
+```bash
+docker compose up -d --build
+```
+
+The verification confirmed:
+
+- Successful .NET 10 API image build.
+- Creation of a new Docker network and persistent volumes.
+- Successful SQL Server initialization and health checks.
+- Automatic creation of `InventoryDB` and its database schema.
+- Successful import of `InventoryRealm` into Keycloak.
+- Availability of the configured OAuth2 clients and realm roles.
+- Successful startup of the API and access to Swagger.
+
+The Docker environment uses local development settings and is not intended for production deployment.
