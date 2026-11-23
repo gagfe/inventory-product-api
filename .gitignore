@@ -1,0 +1,29 @@
+# Build output
+**/bin/
+**/obj/
+
+# Visual Studio and VS Code
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+appsettings.Development.local.json
+**/secrets.json
+*.pfx
+*.p12
+*.pem
+*.key
+
+# Test output
+TestResults/
+**/TestResults/
+coverage/
+
+# Operating system
+.DS_Store
+Thumbs.db

@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Docker/" />
+  <Folder Name="/Docker/sql/" />
+  <Project Path="Inventory_Product.Api/Inventory_Product.Api.csproj" />
+  <Project Path="Inventory_Product.Application/Inventory_Product.Application.csproj" />
+  <Project Path="Inventory_Product.Domain/Inventory_Product.Domain.csproj" />
+  <Project Path="Inventory_Product.Repository/Inventory_Product.Repository.csproj" Id="39587dc9-8561-443c-ae95-5dfd75cffd48" />
+  <Project Path="Inventory_Product.Test/Inventory_Product.Test.csproj" />
+</Solution>
